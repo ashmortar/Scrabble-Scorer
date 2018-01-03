@@ -11,13 +11,20 @@ public class ScrabbleTest {
     public void calculateScore_returnsScoreForSingleLetter_1() throws Exception {
         Scrabble testScrabble = new Scrabble();
         Integer expected = 1;
-        assertEquals(1, testScrabble.calculateScore("a"));
+        assertEquals(expected, testScrabble.calculateScore("a"));
     }
 
     @Test
-    public void calculateScore_returnsScoreForAll1ValueLetters_1() throws Exception {
+    public void calculateScore_returnsScoreForAllLetters_10() throws Exception {
         Scrabble testScrabble = new Scrabble();
-        Integer expected = 1;
-        assertEquals(1, testScrabble.calculateScore("t"));
+        Integer expected = 10;
+        assertEquals(expected, testScrabble.calculateScore("z"));
+    }
+
+    @Test
+    public void calculateScore_returnsScoreForMulptileLetters_12() throws Exception {
+        Scrabble testScrabble = new Scrabble();
+        Integer expected = 12;
+        assertEquals(expected, testScrabble.calculateScore("jonas"));
     }
 }
