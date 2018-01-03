@@ -13,4 +13,11 @@ public class ScrabbleTest {
         Integer expected = 1;
         assertEquals(1, testScrabble.calculateScore("a"));
     }
+
+    @Test
+    public void calculateScore_returnsScoreForAll1ValueLetters_1() throws Exception {
+        Scrabble testScrabble = new Scrabble();
+        Integer expected = 1;
+        assertEquals(1, testScrabble.calculateScore("t"));
+    }
 }
